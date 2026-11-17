@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    background: #f2f2f2;
+}
+
+/* Contenedor general: los carriles quedan uno al lado del otro */
+#contenedor {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px;
+    overflow-x: auto;
+    min-height: 100vh;
+}
+
+#carriles {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+/* Cada carril */
+.carril {
+    width: 300px;
+    min-width: 280px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    position: relative;
+}
+
+.carril-titulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid black;
+    font-weight: bold;
+}
+
+.btn-menu {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+/* Menú con Refresh y Delete */
+.menu {
+    position: absolute;
+    right: 10px;
+    top: 40px;
+    background: white;
+    border: 2px solid black;
+    border-radius: 8px;
+    z-index: 5;
+}
+
+.menu button {
+    display: block;
+    width: 100%;
+    padding: 8px 15px;
+    background: white;
+    border: none;
+    cursor: pointer;
+}
+
+.menu button:hover {
+    background: #ddd;
+}
+
+/* Cada publicación */
+.post {
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border-bottom: 1px solid #aaa;
+}
+
+.votos {
+    min-width: 40px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.post a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.post a:hover {
+    text-decoration: underline;
+}
+
+.autor {
+    font-size: 12px;
+    color: gray;
+    margin: 3px 0 0 0;
+}
+
+.estado {
+    padding: 15px;
+    text-align: center;
+}
+
+.estado.error {
+    color: red;
+}
+
+/* Botón + */
+#btnAbrir {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid black;
+    background: white;
+    font-size: 22px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Popup */
+#popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.oculto {
+    display: none !important;
+}
+
+.caja {
+    background: white;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+}
+
+.caja input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.caja button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#btnAgregar {
+    background: black;
+    color: white;
+}
+
+#mensaje {
+    color: red;
+    min-height: 20px;
+    margin: 0 0 5px 0;
+}
+
+/* Para pantallas pequeñas: los carriles ocupan casi todo el ancho */
+@media (max-width: 600px) {
+    .carril {
+        width: 85vw;
+    }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cliente Reddit</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Aquí van todos los carriles y el botón + al final -->
+    <div id="contenedor">
+        <div id="carriles"></div>
+        <button id="btnAbrir" title="Agregar subreddit">+</button>
+    </div>
+
+    <!-- Popup para pedir el nombre del subreddit (empieza oculto) -->
+    <div id="popup" class="oculto">
+        <div class="caja">
+            <p>Escribe el nombre del subreddit</p>
+            <input type="text" id="inputSubreddit" placeholder="ej: javascript">
+            <!-- Aquí sale el mensaje de error o de "cargando" -->
+            <p id="mensaje"></p>
+            <button id="btnAgregar">Agregar Subreddit</button>
+            <button id="btnCerrar">Cancelar</button>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
